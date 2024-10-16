@@ -1,19 +1,27 @@
 Algoritmo ejercicio9
-	// Realizar un programa que compruebe si una cadena contiene una subcadena. Las dos cadenas se
-	// introducen por teclado.
-	Escribir 'Introduce una cadena:'Sin Saltar
-	Leer cad
-	Escribir 'Introduce una subcadena:'Sin Saltar
-	Leer subcad
-	num_subcadenas <- Longitud(cad)-Longitud(subcad)+1
-	Para nsubc<-0 Hasta num_subcadenas-1 Hacer
-		Si Subcadena(cad,nsubc,nsubc+Longitud(subcad)-1)=subcad Entonces
-			indicador <- Verdadero
+	//Realizar un programa que compruebe si una cadena contiene una subcadena. Las dos cadenas se
+	//introducen por teclado.
+	
+	Escribir "Introduce la primera cadena: "
+	Leer cadena1
+	Escribir "Introduce la subcadena a buscar: "
+	Leer cadena2
+	
+	tamaño1<- Longitud(cadena1)
+	tamaño2<- Longitud(cadena2)
+	i<-0
+	encontrada <- Falso
+	
+	Mientras (i <= tamaño1 - tamaño2) Y (encontrada = Falso)  Hacer
+		Si Subcadena(cadena1, i, i + tamaño2) = cadena2 Entonces
+			encontrada=Verdadero
+		SiNo
+				i <- i + 1
 		FinSi
-	FinPara
-	Si indicador Entonces
-		Escribir 'La cadena no contiene la subcadena.'
-	SiNo
-		Escribir 'La cadena contiene la subcadena.'
-	FinSi
+	FinMientras
+		Si encontrada = Verdadero Entonces
+			Escribir  "La subcadena está incluida en la cadena"
+		SiNo
+			Escribir "La subcadena no está incluida en la cadena"
+		FinSi
 FinAlgoritmo
