@@ -1,6 +1,6 @@
 Algoritmo ejercicio4
 	// Suponiendo que hemos introducido una cadena por teclado que representa una frase (palabras
-	// separadas por espacios), realiza un programa que cuente cu·ntas palabras tiene.
+	// separadas por espacios), realiza un programa que cuente cu√°ntas palabras tiene.
 	contador<-1
 	i<-0
 	
@@ -14,5 +14,5 @@ Algoritmo ejercicio4
 		FinSi
 		i<- i+1
 	Hasta Que i=Longitud(frase)
-	Escribir "Hay un total de " contador " frases"
+	Escribir "Hay un total de " contador " palabras"
 FinAlgoritmo
